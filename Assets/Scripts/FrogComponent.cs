@@ -11,10 +11,11 @@ public class FrogComponent : MonoBehaviour
 	[SerializeField] private HingeJoint2D Hinge;
 
 	private GameObject Tongue;
+	private Rigidbody2D _rigidbody;
 
-	void Start()
+	private void Awake()
 	{
-		Hinge = gameObject.GetComponent<HingeJoint2D>();
+		_rigidbody = GetComponent<Rigidbody2D>();
 	}
 
 	// Update is called once per frame
@@ -24,20 +25,24 @@ public class FrogComponent : MonoBehaviour
 		{
 			AttachTongue();
 		}
-		else if (Hinge.enabled && Input.GetMouseButton(0))
-		{
-			HandleSwing();
-		}
 		else if (Input.GetMouseButtonDown(1))
 		{
 			DetachTongue();
 		}
 	}
 
+	private void FixedUpdate()
+	{
+		if (Hinge.enabled && Input.GetMouseButton(0))
+		{
+			HandleSwing();
+		}
+	}
+
 	void HandleSwing()
 	{
 		float ForceX = DragScale * Input.GetAxis("Mouse X");
-		gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(ForceX, 0.0f));
+		_rigidbody.AddForce(new Vector2(ForceX, 0.0f));
 	}
 
 	void AttachTongue()
