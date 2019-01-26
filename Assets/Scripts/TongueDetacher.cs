@@ -18,7 +18,6 @@ public class TongueDetacher : MonoBehaviour
 			WeightRigidBody.mass = 20;
 			HingeJoint2D WeightHingeJoint = LeftWeight.AddComponent<HingeJoint2D>();
 			WeightHingeJoint.connectedBody = Link;
-			//WeightHingeJoint.anchor = new Vector2(0f,0.8f);
 			Hinge.enabled = false;
 		}
 	}
