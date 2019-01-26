@@ -103,9 +103,9 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1294170645
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
@@ -116,8 +116,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.09836197
-        value: 0.20833206
+        time: 0
+        value: 0.031864166
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -125,8 +125,17 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.99453735
-        value: 0.91666543
+        time: 0.9671653
+        value: 0.12472093
+        inSlope: 0.28256503
+        outSlope: 0.28256503
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 1
+      - serializedVersion: 3
+        time: 1
+        value: 0.3937925
         inSlope: 1.1451398
         outSlope: 1.1451398
         tangentMode: 0
