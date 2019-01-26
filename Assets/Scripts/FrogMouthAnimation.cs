@@ -15,13 +15,19 @@ public struct MouthAnimationState
 public class FrogMouthAnimation : MonoBehaviour {
 
 	[SerializeField] private MouthAnimationState[] _mouthAnimStates;
+	[SerializeField] private float _mouthAnimateSpeed;
 
 	[Range(0.0f, 1.0f)]
 	[SerializeField] private float _mouthOpenValue = 0.0f;
 
+	private float _currentMouthOpenValue = 0.0f;
+
 	public void SetMouthOpenValue(float NewValue)
 	{
-		_mouthOpenValue = NewValue;
+		if (NewValue != _mouthOpenValue)
+		{
+			_mouthOpenValue = NewValue;
+		}
 	}
 
 	void OnValidate()
@@ -41,10 +47,25 @@ public class FrogMouthAnimation : MonoBehaviour {
 
 	void UpdateMouthAnimation()
 	{
+		if (_currentMouthOpenValue != _mouthOpenValue)
+		{
+			if (_currentMouthOpenValue < _mouthOpenValue - 0.01f)
+			{
+				_currentMouthOpenValue += Time.deltaTime*_mouthAnimateSpeed;
+			}
+			else if (_currentMouthOpenValue > _mouthOpenValue + 0.01f)
+			{
+				_currentMouthOpenValue -= Time.deltaTime*_mouthAnimateSpeed;
+			}
+			else
+			{
+				_currentMouthOpenValue = _mouthOpenValue;
+			}
+		}
 		foreach (MouthAnimationState state in _mouthAnimStates)
 		{
-			state.ObjectToAnimate.transform.localPosition = VectorLerp(state.MouthClosedLocalPosition, state.MouthOpenLocalPosition, _mouthOpenValue);
-			state.ObjectToAnimate.transform.localEulerAngles = VectorLerp(state.MouthClosedLocalEulerAngles, state.MouthOpenLocalEulerAngles, _mouthOpenValue);
+			state.ObjectToAnimate.transform.localPosition = VectorLerp(state.MouthClosedLocalPosition, state.MouthOpenLocalPosition, _currentMouthOpenValue);
+			state.ObjectToAnimate.transform.localEulerAngles = VectorLerp(state.MouthClosedLocalEulerAngles, state.MouthOpenLocalEulerAngles, _currentMouthOpenValue);
 		}
 	}
 
