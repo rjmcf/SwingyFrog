@@ -19,6 +19,11 @@ public class TongueRenderer : MonoBehaviour
 		targets.Clear();
 	}
 
+	public void RemoveFirstTarget()
+	{
+		targets.RemoveAt(0);
+	}
+
 	public void SetTargets(List<Transform> newTargets)
 	{
 		ResetTargets();
