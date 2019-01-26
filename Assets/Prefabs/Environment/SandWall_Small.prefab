@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4410014902896890}
   - component: {fileID: 212082766101337984}
   - component: {fileID: 61940912944968838}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SandWall_Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
