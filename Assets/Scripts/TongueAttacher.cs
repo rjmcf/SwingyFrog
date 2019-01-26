@@ -17,7 +17,7 @@ public class TongueAttacher : MonoBehaviour
 			Vector3 ClickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			GameObject NewTongue = GameObject.Instantiate(TonguePrefab);
 			TongueCreater TongueCreaterScript = NewTongue.GetComponent<TongueCreater>();
-			TongueCreaterScript.CreateTongue(new Vector2(FrogPos.x, FrogPos.y) + Hinge.anchor, new Vector2(ClickPos.x, ClickPos.y));
+			TongueCreaterScript.CreateTongue(Hinge.transform, new Vector2(ClickPos.x, ClickPos.y));
 			Hinge.enabled = true;
 			Hinge.connectedBody = TongueCreaterScript.TongueAttachRigidbody;
 			FrogMouthInstance.SetMouthOpenValue(1f);
