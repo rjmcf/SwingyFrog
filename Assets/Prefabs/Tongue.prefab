@@ -51,7 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e71edff10c7c435fa366df419abb1f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ToungeAttachRigidbody: {fileID: 0}
+  TongueAttachRigidbody: {fileID: 0}
+  SegmentLocations: []
+  Ceiling: {fileID: 0}
   ChainLinkOriginPrefab: {fileID: 1552497296020660, guid: 6d3b981cc1769449d8d079498e4c4c27,
     type: 2}
-  SegmentLength: 0.5
+  SegmentLength: 0.6
