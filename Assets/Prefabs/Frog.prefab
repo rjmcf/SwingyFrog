@@ -76,6 +76,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a09eb63c20c7495bb1534c01cdbc613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TonguePrefab: {fileID: 1477036593523976, guid: 712be94e05bb347818214400a19c5b15,
+    type: 2}
 --- !u!114 &114579461114704100
 MonoBehaviour:
   m_ObjectHideFlags: 1
