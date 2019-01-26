@@ -261,30 +261,30 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!1 &454412289
+--- !u!1 &362019065
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 454412293}
-  - component: {fileID: 454412292}
-  - component: {fileID: 454412291}
-  - component: {fileID: 454412290}
-  m_Layer: 0
-  m_Name: Ceiling (1)
+  - component: {fileID: 362019069}
+  - component: {fileID: 362019068}
+  - component: {fileID: 362019067}
+  - component: {fileID: 362019066}
+  m_Layer: 8
+  m_Name: Ceiling (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &454412290
+--- !u!61 &362019066
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 454412289}
+  m_GameObject: {fileID: 362019065}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -304,13 +304,13 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
---- !u!50 &454412291
+--- !u!50 &362019067
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 454412289}
+  m_GameObject: {fileID: 362019065}
   m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -324,12 +324,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!212 &454412292
+--- !u!212 &362019068
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 454412289}
+  m_GameObject: {fileID: 362019065}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -370,15 +370,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &454412293
+--- !u!4 &362019069
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 454412289}
+  m_GameObject: {fileID: 362019065}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.52, y: -0.34, z: -5.7034216}
-  m_LocalScale: {x: 62.79441, y: 8.826904, z: 1}
+  m_LocalPosition: {x: -0.39, y: 0.75, z: -5.7034216}
+  m_LocalScale: {x: 7.723713, y: 8.288464, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 1042188418}
   - component: {fileID: 1042188420}
   - component: {fileID: 1042188421}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -720,6 +720,30 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: -0.06
       objectReference: {fileID: 0}
+    - target: {fileID: 1365281366271676, guid: c556069238cce3146a495b6378f3feda, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820246078494712, guid: c556069238cce3146a495b6378f3feda, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1356992555492438, guid: c556069238cce3146a495b6378f3feda, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806969942423380, guid: c556069238cce3146a495b6378f3feda, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854903146748188, guid: c556069238cce3146a495b6378f3feda, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1162017208858198, guid: c556069238cce3146a495b6378f3feda, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c556069238cce3146a495b6378f3feda, type: 2}
   m_IsPrefabAsset: 0
@@ -793,11 +817,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4277678888427652, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4277678888427652, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 50600084995141548, guid: db7efa47bab9b4177b79b9791cc2ca2b,
         type: 2}
@@ -823,6 +847,10 @@ Prefab:
         type: 2}
       propertyPath: m_UseLimits
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664455208644624, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
