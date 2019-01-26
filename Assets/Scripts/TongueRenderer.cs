@@ -5,39 +5,38 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class TongueRenderer : MonoBehaviour
 {
-
-	[SerializeField] private Transform[] _targets;
+	public List<Transform> targets;
 
 	private LineRenderer _lineRenderer = null;
 
 	private Vector3[] _tonguePoints;
-	private int _numTargets = 0;
 	private int _targetSlack = 10;
 
 	// Public interface
 
 	public void ResetTargets()
 	{
-		for (int index = 0; index < _numTargets; ++index)
-		{
-			_targets[index] = null;
-		}
-		_numTargets = 0;
+		targets.Clear();
 	}
 
-	public void AddTarget(Transform target)
+	public void SetTargets(List<Transform> newTargets)
 	{
-		_targets[_numTargets++] = target;
+		ResetTargets();
+		foreach (Transform target in newTargets)
+		{
+			targets.Add(target);
+		}
+		_tonguePoints = new Vector3[targets.Count];
 	}
 
 	// Private interface
 
 	private void UpdateTonguePositions()
 	{
-		_lineRenderer.positionCount = _numTargets;
-		for (int index = 0; index < _numTargets; ++index)
+		_lineRenderer.positionCount = targets.Count;
+		for (int index = 0; index < targets.Count; ++index)
 		{
-			_tonguePoints[index] -= (_tonguePoints[index] - _targets[index].position) * 0.5f;
+			_tonguePoints[index] -= (_tonguePoints[index] - targets[index].position) * 0.5f;
 			_lineRenderer.SetPosition(index, _tonguePoints[index]);
 		}
 	}
@@ -46,15 +45,7 @@ public class TongueRenderer : MonoBehaviour
 
 	void Awake()
 	{
-		_numTargets = 0;
-		for (int index = 0; index < _targets.Length; ++index)
-		{
-			if (_targets[index] != null)
-			{
-				_numTargets++;
-			}
-		}
-		_tonguePoints = new Vector3[_targetSlack];
+		targets = new List<Transform>();
 		_lineRenderer = GetComponent<LineRenderer>();
 	}
 

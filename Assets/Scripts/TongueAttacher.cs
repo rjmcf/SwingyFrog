@@ -5,14 +5,7 @@ using UnityEngine;
 public class TongueAttacher : MonoBehaviour
 {
 	public GameObject TonguePrefab;
-
-	private TongueCreater TongueCreater;
-
-	void Start()
-	{
-		GameObject TongueObject = GameObject.Instantiate(TonguePrefab, new Vector3(), Quaternion.identity);
-		TongueCreater = TongueObject.GetComponent<TongueCreater>();
-	}
+	public FrogMouthAnimation FrogMouthInstance;
 
 	// Update is called once per frame
 	void Update ()
@@ -22,9 +15,12 @@ public class TongueAttacher : MonoBehaviour
 		{
 			Vector3 FrogPos = gameObject.transform.position;
 			Vector3 ClickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			TongueCreater.CreateTongue(new Vector2(FrogPos.x, FrogPos.y) + Hinge.anchor, new Vector2(ClickPos.x, ClickPos.y));
+			GameObject NewTongue = GameObject.Instantiate(TonguePrefab);
+			TongueCreater TongueCreaterScript = NewTongue.GetComponent<TongueCreater>();
+			TongueCreaterScript.CreateTongue(new Vector2(FrogPos.x, FrogPos.y) + Hinge.anchor, new Vector2(ClickPos.x, ClickPos.y));
 			Hinge.enabled = true;
-			Hinge.connectedBody = TongueCreater.TongueAttachRigidbody;
+			Hinge.connectedBody = TongueCreaterScript.TongueAttachRigidbody;
+			FrogMouthInstance.SetMouthOpenValue(1f);
 		}
 	}
 }

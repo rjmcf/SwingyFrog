@@ -5,7 +5,7 @@ using UnityEngine;
 public class TongueCreater : MonoBehaviour
 {
 	public Rigidbody2D TongueAttachRigidbody;
-	public List<Vector2> SegmentLocations;
+	public List<Transform> TongueSegments;
 	public Rigidbody2D Ceiling;
 
 	[SerializeField] private GameObject ChainLinkOriginPrefab;
@@ -18,17 +18,19 @@ public class TongueCreater : MonoBehaviour
 		Vector2 SurfaceToFrog = FrogPoint - AttachPoint;
 		Vector2 SurfaceToFrogDir = SurfaceToFrog.normalized;
 		float NumSegments = SurfaceToFrog.magnitude / SegmentLength;
-		SegmentLocations = new List<Vector2>();
-		for (int i = 0; i < NumSegments-1; i++)
+		List<Vector2> SegmentLocations = new List<Vector2>();
+		for (int i = 0; i < NumSegments; i++)
 		{
 			SegmentLocations.Add(AttachPoint + SurfaceToFrogDir * SegmentLength * i);
 		}
 		GameObject LastSegment = null;
 		GameObject CurrentSegment = null;
+		TongueSegments = new List<Transform>();
 		foreach (Vector2 SegmentLocation in SegmentLocations)
 		{
 			float CosAngleToRotate = Vector2.Dot(Vector2.up, -SurfaceToFrogDir);
-			CurrentSegment = GameObject.Instantiate(ChainLinkOriginPrefab, SegmentLocation, Quaternion.identity);
+			CurrentSegment = GameObject.Instantiate(ChainLinkOriginPrefab, SegmentLocation, Quaternion.identity, transform);
+			TongueSegments.Add(CurrentSegment.transform);
 			CurrentSegment.transform.eulerAngles = new Vector3(0f, 0f, Multiplier * Mathf.Rad2Deg * Mathf.Acos(CosAngleToRotate));
 			if (LastSegment)
 			{
@@ -37,5 +39,14 @@ public class TongueCreater : MonoBehaviour
 			LastSegment = CurrentSegment;
 		}
 		TongueAttachRigidbody = CurrentSegment.GetComponentInChildren<Rigidbody2D>();
+	}
+
+	void Update()
+	{
+		if (TongueSegments.Count > 0)
+		{
+			Debug.Log(TongueSegments[0].transform.position);
+			GetComponent<TongueRenderer>().SetTargets(TongueSegments);
+		}
 	}
 }

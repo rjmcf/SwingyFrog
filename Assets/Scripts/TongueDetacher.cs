@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TongueDetacher : MonoBehaviour
 {
+	public FrogMouthAnimation FrogMouthInstance;
+
 	// Update is called once per frame
 	void Update ()
 	{
@@ -19,6 +21,7 @@ public class TongueDetacher : MonoBehaviour
 			HingeJoint2D WeightHingeJoint = LeftWeight.AddComponent<HingeJoint2D>();
 			WeightHingeJoint.connectedBody = Link;
 			Hinge.enabled = false;
+			FrogMouthInstance.SetMouthOpenValue(0f);
 		}
 	}
 }

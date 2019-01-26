@@ -19,6 +19,11 @@ public class FrogMouthAnimation : MonoBehaviour {
 	[Range(0.0f, 1.0f)]
 	[SerializeField] private float _mouthOpenValue = 0.0f;
 
+	public void SetMouthOpenValue(float NewValue)
+	{
+		_mouthOpenValue = NewValue;
+	}
+
 	void OnValidate()
 	{
 		UpdateMouthAnimation();
