@@ -19,12 +19,22 @@ public class FrogMouthAnimation : MonoBehaviour {
 	[Range(0.0f, 1.0f)]
 	[SerializeField] private float _mouthOpenValue = 0.0f;
 
+	void OnValidate()
+	{
+		UpdateMouthAnimation();
+	}
+
 	void Awake()
 	{
 		_mouthOpenValue = 0.0f;
 	}
 
 	void Update()
+	{
+		UpdateMouthAnimation();
+	}
+
+	void UpdateMouthAnimation()
 	{
 		foreach (MouthAnimationState state in _mouthAnimStates)
 		{
