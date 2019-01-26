@@ -69,7 +69,7 @@ MonoBehaviour:
   TongueAttachRigidbody: {fileID: 0}
   TongueSegments: []
   Ceiling: {fileID: 0}
-  ChainLinkOriginPrefab: {fileID: 1552497296020660, guid: 6d3b981cc1769449d8d079498e4c4c27,
+  ChainLinkPrefab: {fileID: 114063916976265832, guid: dba20b41d458cc6408f7f86255509ce7,
     type: 2}
   SegmentLength: 0.6
 --- !u!120 &120175828439643162
