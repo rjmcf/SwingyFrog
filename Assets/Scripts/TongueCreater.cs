@@ -19,7 +19,7 @@ public class TongueCreater : MonoBehaviour
 		Vector2 SurfaceToFrogDir = SurfaceToFrog.normalized;
 		float NumSegments = SurfaceToFrog.magnitude / SegmentLength;
 		SegmentLocations = new List<Vector2>();
-		for (int i = 0; i < NumSegments; i++)
+		for (int i = 0; i < NumSegments-1; i++)
 		{
 			SegmentLocations.Add(AttachPoint + SurfaceToFrogDir * SegmentLength * i);
 		}
