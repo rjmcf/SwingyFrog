@@ -302,7 +302,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.5167465
+        value: 0.23923492
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -310,8 +310,8 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.9956332
-        value: 0.2296651
+        time: 1
+        value: 0.06699115
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -705,71 +705,71 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4277808502330878, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.03568818
       objectReference: {fileID: 0}
     - target: {fileID: 4277808502330878, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.999363
       objectReference: {fileID: 0}
     - target: {fileID: 4277808502330878, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.007578537
       objectReference: {fileID: 0}
     - target: {fileID: 4277808502330878, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.15
+      value: -0.17207661
       objectReference: {fileID: 0}
     - target: {fileID: 4361648543397994, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.112310104
+      value: -0.0729769
       objectReference: {fileID: 0}
     - target: {fileID: 4361648543397994, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.9936732
+      value: 0.99733365
       objectReference: {fileID: 0}
     - target: {fileID: 4361648543397994, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.028
+      value: 0.022398472
       objectReference: {fileID: 0}
     - target: {fileID: 4361648543397994, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.071
+      value: -0.027835289
       objectReference: {fileID: 0}
     - target: {fileID: 4409225818049462, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.100447856
       objectReference: {fileID: 0}
     - target: {fileID: 4409225818049462, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99494237
       objectReference: {fileID: 0}
     - target: {fileID: 4409225818049462, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.07
+      value: -0.09240611
       objectReference: {fileID: 0}
     - target: {fileID: 4409225818049462, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.071
+      value: -0.06144445
       objectReference: {fileID: 0}
     - target: {fileID: 4682038718910844, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.17020951
+      value: -0.17103115
       objectReference: {fileID: 0}
     - target: {fileID: 4682038718910844, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.98540795
+      value: 0.9852657
       objectReference: {fileID: 0}
     - target: {fileID: 4682038718910844, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.203
+      value: 0.2053065
       objectReference: {fileID: 0}
     - target: {fileID: 4682038718910844, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.013
+      value: 0.02192717
       objectReference: {fileID: 0}
     - target: {fileID: 4729149261632710, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.005
+      value: 0.02366664
       objectReference: {fileID: 0}
     - target: {fileID: 50460857610750846, guid: db7efa47bab9b4177b79b9791cc2ca2b,
         type: 2}
@@ -791,6 +791,22 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 157417c09906d0040a4dd0b0181c0691, type: 2}
+    - target: {fileID: 4729149261632710, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.059999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 114015511456451004, guid: db7efa47bab9b4177b79b9791cc2ca2b,
+        type: 2}
+      propertyPath: AppendageSprite
+      value: 
+      objectReference: {fileID: 21300010, guid: 9341dbe628a8fea41896dd41b95a3959,
+        type: 3}
+    - target: {fileID: 114651398413073868, guid: db7efa47bab9b4177b79b9791cc2ca2b,
+        type: 2}
+      propertyPath: AppendageSprite
+      value: 
+      objectReference: {fileID: 21300010, guid: 9341dbe628a8fea41896dd41b95a3959,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db7efa47bab9b4177b79b9791cc2ca2b, type: 2}
   m_IsPrefabAsset: 0
@@ -1573,7 +1589,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.50717735
+        value: 0.22488213
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1581,8 +1597,8 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.99344975
-        value: 0.14832538
+        time: 0.9912525
+        value: 0.06220478
         inSlope: 0
         outSlope: 0
         tangentMode: 0

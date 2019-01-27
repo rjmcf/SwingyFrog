@@ -13,6 +13,7 @@ public class FrogLimbComponent : MonoBehaviour
 	[SerializeField] private int NumBones;
 	[SerializeField] private float ArmLength;
 	[SerializeField] private float ArmThickness;
+	[SerializeField] private Sprite AppendageSprite;
 
 	private Rigidbody2D _rigidbody;
 	private LineRenderer _lineRenderer;
@@ -71,6 +72,12 @@ public class FrogLimbComponent : MonoBehaviour
 
 				_bones[boneIndex].transform.localPosition = Vector3.right * (ArmLength*boneIndex/NumBones);
 				_bones[boneIndex].transform.localRotation = Quaternion.identity;
+
+				if (boneIndex == NumBones-1)
+				{
+					SpriteRenderer spriteRenderer = chain.AddComponent<SpriteRenderer>();
+					spriteRenderer.sprite = AppendageSprite;
+				}
 			}
 
 			_lineRenderer.SetPosition(boneIndex, _bones[boneIndex].transform.position);

@@ -188,8 +188,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1597524202436900}
-  m_LocalRotation: {x: 0, y: 0, z: -0.10812081, w: 0.99413776}
-  m_LocalPosition: {x: -0.023, y: -0.217, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.02166482, w: 0.9997653}
+  m_LocalPosition: {x: -0.0045999996, y: -0.1634, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4369903422280152}
@@ -214,8 +214,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1036425554917248}
-  m_LocalRotation: {x: 0, y: 0, z: 0.00734777, w: 0.999973}
-  m_LocalPosition: {x: 0.011, y: 0.06, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.08845273, w: 0.9960804}
+  m_LocalPosition: {x: 0.024600001, y: -0.044800006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4369903422280152}
@@ -245,8 +245,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1289013400521176}
-  m_LocalRotation: {x: 0, y: 0, z: 0.30063927, w: 0.953738}
-  m_LocalPosition: {x: -0.138, y: -0.042, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.061034605, w: 0.9981357}
+  m_LocalPosition: {x: -0.0836, y: -0.0652, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4369903422280152}
@@ -258,8 +258,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1010752395264884}
-  m_LocalRotation: {x: 0, y: 0, z: -0.17270276, w: 0.984974}
-  m_LocalPosition: {x: 0.21, y: 0.093, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.17070825, w: 0.98532164}
+  m_LocalPosition: {x: 0.20439999, y: 0.0082, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4369903422280152}
@@ -272,7 +272,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1774556717327904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 0.082, z: 0}
+  m_LocalPosition: {x: -0.06, y: 0.012399999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4369903422280152}
@@ -406,14 +406,7 @@ MonoBehaviour:
   NumBones: 20
   ArmLength: 2
   ArmThickness: 0.3
-  LOD: 8
-  TextureRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  FlipTexture: 0
+  AppendageSprite: {fileID: 0}
 --- !u!114 &114490223274399324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -428,6 +421,7 @@ MonoBehaviour:
   TonguePrefab: {fileID: 1477036593523976, guid: 712be94e05bb347818214400a19c5b15,
     type: 2}
   FrogMouthInstance: {fileID: 114619537138563640}
+  CurrentTongueAttachmentType: 0
   DragScale: 2000
   Hinge: {fileID: 233336686710593032}
 --- !u!114 &114619537138563640
@@ -485,14 +479,7 @@ MonoBehaviour:
   NumBones: 20
   ArmLength: 2
   ArmThickness: 0.3
-  LOD: 8
-  TextureRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  FlipTexture: 0
+  AppendageSprite: {fileID: 0}
 --- !u!137 &137116140972418122
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -627,7 +614,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.472, y: 0.39}
+  m_Size: {x: 0.482, y: 0.39400002}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -811,7 +798,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6, y: 3.18}
+  m_Size: {x: 0.611, y: 0.32500002}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

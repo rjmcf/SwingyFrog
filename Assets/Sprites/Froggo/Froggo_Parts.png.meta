@@ -68,7 +68,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -79,7 +79,18 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 512
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -95,12 +106,12 @@ TextureImporter:
       name: Froggo_Dome
       rect:
         serializedVersion: 2
-        x: 57
-        y: 1333
+        x: 74
+        y: 1052
         width: 482
         height: 394
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -115,12 +126,12 @@ TextureImporter:
       name: Froggo_Mouth_Top
       rect:
         serializedVersion: 2
-        x: 664
-        y: 1377
+        x: 672
+        y: 1126
         width: 611
         height: 325
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -136,11 +147,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 809
+        y: 533
         width: 589
         height: 516
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +166,12 @@ TextureImporter:
       name: Froggo_Eye
       rect:
         serializedVersion: 2
-        x: 708
-        y: 1084
+        x: 716
+        y: 808
         width: 196
         height: 184
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,12 +186,12 @@ TextureImporter:
       name: Froggo_Parts_5
       rect:
         serializedVersion: 2
-        x: 1409
-        y: 296
-        width: 597
-        height: 876
+        x: 1077
+        y: 728
+        width: 362
+        height: 332
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,36 +203,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Froggo_Parts_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 370
-        width: 1146
-        height: 294
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 854f93fd8b5b3e84788bb8c22beccbde
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Froggo_Parts_7
       rect:
         serializedVersion: 2
-        x: 49
-        y: 0
-        width: 1442
-        height: 206
+        x: 1079
+        y: 392
+        width: 596
+        height: 305
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 2, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
