@@ -7,7 +7,7 @@ public class TongueAttacher_NearestPointOnRay : TongueAttacher {
 	public override bool AttachTongue(HingeJoint2D Hinge, ref GameObject Tongue)
 	{
 		Vector2 ClickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		Vector2 Origin = Hinge.transform.position;
+		Vector2 Origin = TongueOrigin.position;
 		RaycastHit2D FirstHit = Physics2D.Raycast(Origin, ClickPos - Origin, Mathf.Infinity, GeoMask);
 		if (FirstHit.collider == null)
 		{
@@ -22,7 +22,7 @@ public class TongueAttacher_NearestPointOnRay : TongueAttacher {
 
 		Tongue = GameObject.Instantiate(TonguePrefab);
 		TongueCreater TongueCreaterScript = Tongue.GetComponent<TongueCreater>();
-		TongueCreaterScript.CreateTongue(Hinge.transform, FirstHit.point);
+		TongueCreaterScript.CreateTongue(TongueOrigin, FirstHit.point);
 		Hinge.enabled = true;
 		Hinge.connectedBody = TongueCreaterScript.TongueAttachRigidbody;
 		return true;
