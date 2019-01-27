@@ -19,9 +19,11 @@ public class FrogLimbComponent : MonoBehaviour
 	private LineRenderer _lineRenderer;
 
 	private Transform[] _bones;
+	private LayerMask _characterLayer;
 
 	private void Awake()
 	{
+		_characterLayer = LayerMask.NameToLayer("Tongue");
 		_rigidbody = GetComponent<Rigidbody2D>();
 		_lineRenderer = GetComponent<LineRenderer>();
 
@@ -31,6 +33,7 @@ public class FrogLimbComponent : MonoBehaviour
 	private GameObject MakeChain(string name)
 	{
 		GameObject obj = new GameObject(name);
+		obj.layer = _characterLayer;
 		Rigidbody2D rigidbody = obj.AddComponent<Rigidbody2D>();
 		rigidbody.mass = 2.0f;
 		rigidbody.sharedMaterial = _rigidbody.sharedMaterial;
@@ -63,6 +66,7 @@ public class FrogLimbComponent : MonoBehaviour
 			else
 			{
 				GameObject chain = MakeChain("Limb_" + boneIndex.ToString());
+				Debug.Log(chain.layer);
 				HingeJoint2D hinge = chain.GetComponent<HingeJoint2D>();
 				_bones[boneIndex] = chain.transform;
 
