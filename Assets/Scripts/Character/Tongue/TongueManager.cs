@@ -5,7 +5,7 @@ using UnityEngine;
 public class TongueManager : MonoBehaviour {
 
 	// Destroy everything that enters the trigger
-   void OnTriggerEnter(Collider other)
+   void OnTriggerEnter2D(Collider2D collider)
    {
 	   Debug.Log("Collider Entered");
 	   Debug.Log(gameObject);
