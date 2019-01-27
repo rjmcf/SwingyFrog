@@ -66,7 +66,6 @@ public class FrogLimbComponent : MonoBehaviour
 			else
 			{
 				GameObject chain = MakeChain("Limb_" + boneIndex.ToString());
-				Debug.Log(chain.layer);
 				HingeJoint2D hinge = chain.GetComponent<HingeJoint2D>();
 				_bones[boneIndex] = chain.transform;
 
