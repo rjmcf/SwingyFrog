@@ -283,7 +283,7 @@ MonoBehaviour:
     type: 2}
   FrogMouthInstance: {fileID: 114619537138563640}
   CurrentTongueAttachmentType: 0
-  DragScale: 1000
+  DragScale: 2000
   Hinge: {fileID: 233336686710593032}
 --- !u!114 &114619537138563640
 MonoBehaviour:
