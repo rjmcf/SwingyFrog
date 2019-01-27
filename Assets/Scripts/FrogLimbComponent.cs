@@ -70,7 +70,7 @@ public class FrogLimbComponent : MonoBehaviour
 				previousBody = chain.GetComponent<Rigidbody2D>();
 				_bones[boneIndex].transform.parent = _bones[boneIndex - 1].transform;
 
-				_bones[boneIndex].transform.localPosition = Vector3.right * (ArmLength*boneIndex/NumBones);
+				_bones[boneIndex].transform.localPosition = Vector3.zero;
 				_bones[boneIndex].transform.localRotation = Quaternion.identity;
 
 				if (boneIndex == NumBones-1)
