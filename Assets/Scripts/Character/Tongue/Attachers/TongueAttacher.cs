@@ -14,5 +14,5 @@ public abstract class TongueAttacher : MonoBehaviour {
 		 TongueOrigin = transform.Find("TongueOrigin").transform;
 	}
 
-	public abstract bool AttachTongue(HingeJoint2D Hinge, ref GameObject Tongue);
+	public abstract GameObject AttachTongue(HingeJoint2D Hinge);
 }

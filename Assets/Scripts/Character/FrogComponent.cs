@@ -16,6 +16,7 @@ public class FrogComponent : MonoBehaviour
 	private GameObject Tongue;
 	private Rigidbody2D _rigidbody;
 	private TongueAttacher TongueAttacherInstance;
+	private TongueManager TongueManagerInstance;
 
 	private void Awake()
 	{
@@ -37,6 +38,8 @@ public class FrogComponent : MonoBehaviour
 		{
 			TongueAttacherInstance.TonguePrefab = TonguePrefab;
 		}
+
+		TongueManagerInstance = GameObject.Find("TongueKillerInstance").GetComponent<TongueManager>();
 
 		Tongue = null;
 	}
@@ -70,9 +73,11 @@ public class FrogComponent : MonoBehaviour
 
 	void AttachTongue()
 	{
-		if (TongueAttacherInstance.AttachTongue(Hinge, ref Tongue))
+		Tongue = TongueAttacherInstance.AttachTongue(Hinge);
+		if (Tongue != null)
 		{
 			FrogMouthInstance.SetMouthOpenValue(1f);
+			TongueManagerInstance.RegisterNewTongue(Tongue);
 		}
 	}
 

@@ -190,7 +190,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1664455208644624}
   m_LocalRotation: {x: -0, y: -0, z: -0.7043245, w: 0.7098782}
-  m_LocalPosition: {x: 38, y: 60.5, z: -5.7034216}
+  m_LocalPosition: {x: -6.9, y: -0.9, z: -5.7034216}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4369903422280152}
@@ -452,6 +452,7 @@ MonoBehaviour:
   TonguePrefab: {fileID: 1477036593523976, guid: 712be94e05bb347818214400a19c5b15,
     type: 2}
   FrogMouthInstance: {fileID: 114619537138563640}
+  TongueManagerInstance: {fileID: 0}
   CurrentTongueAttachmentType: 0
   DragScale: 1000
   Hinge: {fileID: 233336686710593032}

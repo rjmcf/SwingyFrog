@@ -6,11 +6,18 @@ public class TongueCreater : MonoBehaviour
 {
 	public Rigidbody2D TongueAttachRigidbody;
 	public List<Transform> TongueSegments;
-	public Rigidbody2D Ceiling;
 
-	//[SerializeField] private GameObject ChainLinkOriginPrefab;
 	[SerializeField] private ChainLinkComponent ChainLinkPrefab;
 	[SerializeField] private float SegmentLength;
+
+	private List<GameObject> TongueObjects;
+	private HingeJoint2D CeilingAttachPoint;
+	private int FallingTongueLayer;
+
+	void Awake()
+	{
+		FallingTongueLayer = LayerMask.NameToLayer("FallingTongue");
+	}
 
 	public void CreateTongue(Transform FrogTransform, Vector2 AttachPoint)
 	{
@@ -30,11 +37,17 @@ public class TongueCreater : MonoBehaviour
 		Rigidbody2D LastRigidbody = null;
 		ChainLinkComponent CurrentSegment = null;
 		TongueSegments = new List<Transform>();
+		TongueObjects = new List<GameObject>();
 
 		foreach (Vector2 SegmentLocation in SegmentLocations)
 		{
 			CurrentSegment = GameObject.Instantiate(ChainLinkPrefab, SegmentLocation, Quaternion.identity, transform);
+			if (TongueSegments.Count == 0)
+			{
+				CeilingAttachPoint = CurrentSegment.HingeJoint;
+			}
 			TongueSegments.Add(CurrentSegment.transform);
+			TongueObjects.Add(CurrentSegment.gameObject);
 			CurrentSegment.transform.eulerAngles = new Vector3(0f, 0f, Multiplier * Mathf.Rad2Deg * Mathf.Acos(CosAngleToRotate));
 			if (LastRigidbody)
 			{
@@ -49,36 +62,12 @@ public class TongueCreater : MonoBehaviour
 		TongueAttachRigidbody = LastRigidbody;
 	}
 
-	/*public void CreateTongue(Transform FrogTransform, Vector2 AttachPoint)
+	public void DetachFromCeiling()
 	{
-		Vector2 FrogPoint = FrogTransform.position;
-		int Multiplier = AttachPoint.x > FrogPoint.x ? -1 : 1;
-		Vector2 SurfaceToFrog = FrogPoint - AttachPoint;
-		Vector2 SurfaceToFrogDir = SurfaceToFrog.normalized;
-		float NumSegments = SurfaceToFrog.magnitude / SegmentLength;
-		List<Vector2> SegmentLocations = new List<Vector2>();
-		for (int i = 0; i < NumSegments-1; i++)
+		CeilingAttachPoint.enabled = false;
+		foreach (GameObject TongueObject in TongueObjects)
 		{
-			SegmentLocations.Add(AttachPoint + SurfaceToFrogDir * SegmentLength * i);
+			TongueObject.layer = FallingTongueLayer;
 		}
-		GameObject LastSegment = null;
-		GameObject CurrentSegment = null;
-		TongueSegments = new List<Transform>();
-		foreach (Vector2 SegmentLocation in SegmentLocations)
-		{
-			float CosAngleToRotate = Vector2.Dot(Vector2.up, -SurfaceToFrogDir);
-			CurrentSegment = GameObject.Instantiate(ChainLinkOriginPrefab, SegmentLocation, Quaternion.identity, transform);
-			TongueSegments.Add(CurrentSegment.GetComponentInChildren<HingeJoint2D>().transform);
-			CurrentSegment.transform.eulerAngles = new Vector3(0f, 0f, Multiplier * Mathf.Rad2Deg * Mathf.Acos(CosAngleToRotate));
-			if (LastSegment)
-			{
-				CurrentSegment.GetComponentInChildren<HingeJoint2D>().connectedBody = LastSegment.GetComponentInChildren<Rigidbody2D>();
-			}
-			LastSegment = CurrentSegment;
-		}
-		TongueSegments.Add(FrogTransform);
-		TongueSegments.Reverse();
-		GetComponent<TongueRenderer>().SetTargets(TongueSegments);
-		TongueAttachRigidbody = CurrentSegment.GetComponentInChildren<Rigidbody2D>();
-	}*/
+	}
 }
